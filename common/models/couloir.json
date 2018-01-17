@@ -1,0 +1,40 @@
+{
+  "name": "Couloir",
+  "plural": "Couloirs",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idCouloir": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "nomCouloir": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "etage": {
+      "type": "belongsTo",
+      "model": "Etage",
+      "foreignKey": ""
+    },
+    "chambres": {
+      "type": "hasMany",
+      "model": "Chambre",
+      "foreignKey": ""
+    },
+    "contraintes": {
+      "type": "hasAndBelongsToMany",
+      "model": "Contrainte",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

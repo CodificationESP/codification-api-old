@@ -1,0 +1,32 @@
+{
+  "name": "Batiment",
+  "plural": "Batiments",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nomBatiment": {
+      "type": "string",
+      "id": true,
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "contraintes": {
+      "type": "hasAndBelongsToMany",
+      "model": "Contrainte",
+      "foreignKey": ""
+    },
+    "etages": {
+      "type": "hasMany",
+      "model": "Etage",
+      "foreignKey": ""
+    }
+  },
+
+  "acls": [],
+  "methods": {}
+}

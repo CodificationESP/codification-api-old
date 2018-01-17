@@ -1,0 +1,38 @@
+{
+  "name": "Reservation",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idReservation": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "etat": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "etudiant": {
+      "type": "belongsTo",
+      "model": "Etudiant",
+      "foreignKey": ""
+    },
+    "chambre": {
+      "type": "belongsTo",
+      "model": "Chambre",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

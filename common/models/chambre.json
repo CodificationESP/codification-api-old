@@ -1,0 +1,42 @@
+{
+  "name": "Chambre",
+  "plural": "Chambres",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nomChambre": {
+      "type": "string",
+      "id": true,
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "couloir": {
+      "type": "belongsTo",
+      "model": "Couloir",
+      "foreignKey": ""
+    },
+    "contraintes": {
+      "type": "hasAndBelongsToMany",
+      "model": "Contrainte",
+      "foreignKey": ""
+    },
+    "reservation": {
+      "type": "belongsTo",
+      "model": "Reservation",
+      "foreignKey": ""
+    },
+    "codification": {
+      "type": "belongsTo",
+      "model": "Codification",
+      "foreignKey": ""
+    }
+   
+  },
+  "acls": [],
+  "methods": {}
+}

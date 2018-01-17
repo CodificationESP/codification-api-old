@@ -1,0 +1,40 @@
+{
+  "name": "Etage",
+  "plural": "Etages",
+  "base": "Batiment",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idEtage": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "numEtage": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "batiment": {
+      "type": "belongsTo",
+      "model": "Batiment",
+      "foreignKey": ""
+    },
+    "contraintes": {
+      "type": "hasAndBelongsToMany",
+      "model": "Contrainte",
+      "foreignKey": ""
+    },
+    "couloirs": {
+      "type": "hasAndBelongsToMany",
+      "model": "Couloir",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

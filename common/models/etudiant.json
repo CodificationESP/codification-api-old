@@ -1,0 +1,64 @@
+{
+  "name": "Etudiant",
+  "plural": "Etudiants",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "numEtudiant": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "nomEtudiant": {
+      "type": "string",
+      "required": true
+    },
+    "prenomEtudiant": {
+      "type": "string",
+      "required": true
+    },
+    "dateNaissance": {
+      "type": "date",
+      "required": true
+    },
+    "departement": {
+      "type": "string",
+      "required": true
+    },
+    "genre": {
+      "type": "string",
+      "required": true
+    },
+    "niveau": {
+      "type": "string",
+      "required": true
+    },
+    "formation": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "utilisateur": {
+      "type": "belongsTo",
+      "model": "Utilisateur",
+      "foreignKey": ""
+    },
+    "reservation": {
+      "type": "hasOne",
+      "model": "Reservation",
+      "foreignKey": ""
+    },
+    "codification": {
+      "type": "hasOne",
+      "model": "Codification",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

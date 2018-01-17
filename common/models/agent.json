@@ -1,0 +1,39 @@
+{
+  "name": "Agent",
+  "plural": "Agents",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "numAgent": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "prenomAgent": {
+      "type": "string",
+      "required": true
+    },
+    "nomAgent": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "utilisateur": {
+      "type": "belongsTo",
+      "model": "Utilisateur",
+      "foreignKey": ""
+    },
+    "contraintes": {
+      "type": "hasMany",
+      "model": "Contrainte",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

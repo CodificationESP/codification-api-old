@@ -1,0 +1,26 @@
+{
+  "name": "Utilisateur",
+  "plural": "Utilisateurs",
+  "base": "User",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+  },
+  "validations": [],
+  "relations": {
+    "etudiant": {
+      "type": "hasOne",
+      "model": "Etudiant",
+      "foreignKey": ""
+    },
+    "agent": {
+      "type": "hasOne",
+      "model": "Agent",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

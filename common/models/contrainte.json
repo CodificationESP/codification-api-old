@@ -1,0 +1,58 @@
+{
+  "name": "Contrainte",
+  "plural": "Contraintes",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idContrainte": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "Attribut": {
+      "type": "string",
+      "required": true
+    },
+    "Valeur": {
+      "type": "string",
+      "required": true
+    },
+    "Comparaison": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "agent": {
+      "type": "belongsTo",
+      "model": "Agent",
+      "foreignKey": ""
+    },
+    "couloirs": {
+      "type": "hasAndBelongsToMany",
+      "model": "Couloir",
+      "foreignKey": ""
+    },
+    "batiments": {
+      "type": "hasAndBelongsToMany",
+      "model": "Batiment",
+      "foreignKey": ""
+    },
+    "chambres": {
+      "type": "hasAndBelongsToMany",
+      "model": "Chambre",
+      "foreignKey": ""
+    },
+    "etages": {
+      "type": "hasAndBelongsToMany",
+      "model": "Etage",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
